@@ -94,8 +94,8 @@ $.fn.searchableTable = function(){
 		case "both":
 		scrolldirv = "auto";
 		scrolldirh = "auto";
-		objwidth = "auto";
-		objheight = "auto";
+		objwidth = el_width;
+		objheight = el_height;
 		break;
 		case "none":
 		scrolldirv = "visible";
