@@ -1,3 +1,4 @@
+# View as raw file
 ** =========================== REQUIREMENTS ======================= **
 jquery-1.8+
 SEARCH INPUT FIELD HAS TO HAVE CLASS ".cdctable_search"
