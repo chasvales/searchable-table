@@ -54,6 +54,8 @@ $.fn.searchableTable = function(){
 	var selector = plugin.selector;
 	var passedArgs = arguments[0];
 
+	var obj = $.param(passedArgs);
+console.log(obj);
 	/* DEFAULT SETTINGS */
 	var el_height = "300px";
 	var el_width = "auto";
