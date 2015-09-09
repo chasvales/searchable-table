@@ -54,50 +54,37 @@ $.fn.searchableTable = function(){
 	var selector = plugin.selector;
 	var passedArgs = arguments[0];
 
-	var obj = $.param(passedArgs);
-console.log(obj);
 	/* DEFAULT SETTINGS */
-	var el_height = "300px";
-	var el_width = "auto";
-	var el_scroll = "vert";
+	var height = "300px";
+	var width = "auto";
+	var scroll = "vert";
 	var breakpoint = 800;
 	var tableData = "tbody tr";
 
 	/* RESET TO USER SPECIFIED PARAMS */
-	if(passedArgs.scroll){
-		el_scroll = passedArgs.scroll;
+	for(var property in passedArgs){
+		property = passedArgs[property];
 	}
-	if(passedArgs.height){
-		el_height = passedArgs.height;
-	}
-	if(passedArgs.width){
-		el_width = passedArgs.width;
-	}
-	if(passedArgs.breakpoint){
-		breakpoint = passedArgs.breakpoint;
-	}
-	if(passedArgs.tableData){
-		tableData = passedArgs.tableData;
-	}
+	
 	/* SET VALUES OF VARIALBES FOR INLINE CSS USE */
-	switch(el_scroll){
+	switch(scroll){
 		case "vert":
 		scrolldirv = "auto";
 		scrolldirh = "visible";
 		objwidth = "auto";
-		objheight = el_height;
+		objheight = height;
 		break;
 		case "horz":
 		scrolldirv = "visible";
 		scrolldirh = "auto";
-		objwidth = el_width;
+		objwidth = width;
 		objheight = "auto";
 		break;
 		case "both":
 		scrolldirv = "auto";
 		scrolldirh = "auto";
-		objwidth = el_width;
-		objheight = el_height;
+		objwidth = "auto";
+		objheight = "auto";
 		break;
 		case "none":
 		scrolldirv = "visible";
